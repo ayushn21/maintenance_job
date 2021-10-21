@@ -1,0 +1,10 @@
+Description:
+    Generates a MaintenanceJob and corresponding test case to run one off
+    tasks at deploy time. See `app/jobs/maintenance_job.rb` for more details.
+
+Example:
+    bin/rails generate maintenance_job PopulateSomeNewColumn
+
+    This will create:
+        app/jobs/maintenance/populate_some_new_column_job.rb
+        test/jobs/maintenance/populate_some_new_column_job_test.rb

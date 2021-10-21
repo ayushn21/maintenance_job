@@ -1,0 +1,9 @@
+class Maintenance::<%= class_name %>Job < MaintenanceJob::Base
+  def perform
+    # Implement your fix here
+  end
+
+  def self.identifier
+    <%= Time.now.strftime("%Y%m%d%H%M%S").inspect %>
+  end
+end
