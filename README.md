@@ -4,7 +4,7 @@
 
 Theoretically this could be done in database migrations but that's a terrible idea because the changes can't be tested. It also means if the classes or methods used to manipulate data change in the future, the migrations will break. Migrations should be used to make changes to the schema and nothing else.
 
-This gem was heavily inspired by [this RailsConf 2020 talk](https://railsconf.org/2020/2020/video/alec-clarke-measure-twice-cut-once) by @ alecclarke.
+This gem was heavily inspired by [this RailsConf 2020 talk](https://railsconf.org/2020/2020/video/alec-clarke-measure-twice-cut-once) by @alecclarke.
 
 ## Installation
 Add this line to your application's Gemfile:
