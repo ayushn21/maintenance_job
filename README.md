@@ -3,14 +3,14 @@
 [![Tests](https://github.com/ayushn21/maintenance_job/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/ayushn21/maintenance_job/actions/workflows/tests.yml)
 [![Gem Version](https://badge.fury.io/rb/maintenance_job.svg)](https://badge.fury.io/rb/maintenance_job)
 
-`MaintenanceJob` is a lightweight mechanism to run testable one-off jobs at deploy time to manipulate data in the database.
+`MaintenanceJob` is a lightweight Rails engine to run testable one-off jobs at deploy time to manipulate data in the database.
 
 Theoretically this could be done in database migrations or rake tasks, but that's a terrible idea because the changes can't be tested. In the case of rake tasks, it would also require access to the prod environment to run the tasks which is not always feasible.
 
 This gem was heavily inspired by [this RailsConf 2020 talk](https://railsconf.org/2020/2020/video/alec-clarke-measure-twice-cut-once) by [@alecclarke](https://github.com/alecclarke).
 
 ## Installation
-Add this line to your application's Gemfile:
+Add this line to your Rails application's Gemfile:
 
 ```ruby
 gem 'maintenance_job'
