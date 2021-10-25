@@ -4,7 +4,7 @@ require "generators/maintenance_job_generator"
 class MaintenanceJob::GeneratorTest < Rails::Generators::TestCase
   destination File.expand_path("../../tmp", __dir__)
   setup :prepare_destination
-  tests MaintenanceJob::Generator
+  tests MaintenanceJobGenerator
 
   arguments ["normalize_data"]
 

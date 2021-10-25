@@ -1,4 +1,4 @@
-class MaintenanceJob::Generator < Rails::Generators::NamedBase
+class MaintenanceJobGenerator < Rails::Generators::NamedBase
   source_root File.expand_path('templates', __dir__)
 
   def generate_job_files
