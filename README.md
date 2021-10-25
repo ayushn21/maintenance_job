@@ -4,7 +4,7 @@
 
 Theoretically this could be done in database migrations or rake tasks, but that's a terrible idea because the changes can't be tested. In the case of rake tasks, it would also require access to the prod environment to run the tasks which is not always feasible.
 
-This gem was heavily inspired by [this RailsConf 2020 talk](https://railsconf.org/2020/2020/video/alec-clarke-measure-twice-cut-once) by @alecclarke.
+This gem was heavily inspired by [this RailsConf 2020 talk](https://railsconf.org/2020/2020/video/alec-clarke-measure-twice-cut-once) by [@alecclarke](https://github.com/alecclarke).
 
 ## Installation
 Add this line to your application's Gemfile:
