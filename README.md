@@ -23,7 +23,11 @@ This will copy the database migration that tracks which maintenance jobs have be
 
 ## Usage
 
+### Run maintenance jobs on deploy
+
 Add `bin/rails maintenance_job:execute_pending_jobs` to your deploy script right after you run the database migrations.
+
+### Creating a maintenance job
 
 To create a new maintenance job, run: 
 
