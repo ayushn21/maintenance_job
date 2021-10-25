@@ -2,7 +2,7 @@
 
 `MaintenanceJob` is a mechanism to run testable one-off jobs at deploy time to manipulate data in the database. 
 
-Theoretically this could be done in database migrations but that's a terrible idea because the changes can't be tested. It also means if the classes or methods used to manipulate data change in the future, the migrations will break. Migrations should be used to make changes to the schema and nothing else.
+Theoretically this could be done in database migrations or rake tasks, but that's a terrible idea because the changes can't be tested. In the case of rake tasks, it would also require access to the prod environment to run the tasks which is not always feasible.
 
 This gem was heavily inspired by [this RailsConf 2020 talk](https://railsconf.org/2020/2020/video/alec-clarke-measure-twice-cut-once) by @alecclarke.
 
