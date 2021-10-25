@@ -1,17 +1,5 @@
 require "test_helper"
 
-class Maintenance::TestJob < MaintenanceJob::Base
-  cattr_accessor :count, default: 0
-
-  def perform
-    self.class.count += 1
-  end
-
-  def self.identifier
-    "test"
-  end
-end
-
 class MaintenanceJob::BaseTest < ActiveJob::TestCase
   setup do
     Maintenance::TestJob.count = 0
@@ -26,7 +14,7 @@ class MaintenanceJob::BaseTest < ActiveJob::TestCase
   end
 
   test "pending maintenance jobs are run when run_pending_jobs is called" do
-    MaintenanceJob.run_pending_jobs
+    MaintenanceJob::Base.run_pending_jobs
 
     assert_equal 1, Maintenance::TestJob.count
   end

@@ -1,7 +1,8 @@
 namespace :maintenance_job do
-  desc "Copy the database migration to create a table for maintenance job runs"
+  desc "Install the database migrations and file skeleton required for MaintenanceJob"
   task :install do
     Rake::Task["maintenance_job:install:migrations"].execute
+    # Create `Maintenance` module in app/jobs
   end
 
   desc "Runs all pending maintenance jobs"

@@ -1,8 +1,10 @@
 module MaintenanceJob
   class Base < ActiveJob::Base
-    before_perform { self.class.record_run }
+    queue_as :default
     discard_on ActiveRecord::RecordNotUnique
     discard_on ActiveJob::DeserializationError
+
+    before_perform { self.class.record_run }
 
     def perform
       raise NotImplementedError
