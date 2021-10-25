@@ -1,6 +1,9 @@
 # MaintenanceJob
 
-`MaintenanceJob` is a mechanism to run testable one-off jobs at deploy time to manipulate data in the database. 
+[![Tests](https://github.com/ayushn21/maintenance_job/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/ayushn21/maintenance_job/actions/workflows/tests.yml)
+[![Gem Version](https://badge.fury.io/rb/maintenance_job.svg)](https://badge.fury.io/rb/maintenance_job)
+
+`MaintenanceJob` is a mechanism to run testable one-off jobs at deploy time to manipulate data in the database.
 
 Theoretically this could be done in database migrations or rake tasks, but that's a terrible idea because the changes can't be tested. In the case of rake tasks, it would also require access to the prod environment to run the tasks which is not always feasible.
 
@@ -29,7 +32,7 @@ Add `bin/rails maintenance_job:execute_pending_jobs` to your deploy script right
 
 ### Creating a maintenance job
 
-To create a new maintenance job, run: 
+To create a new maintenance job, run:
 
 ```bash
 $ bin/rails generate maintenance_job job_to_be_done
