@@ -1,5 +1,5 @@
 PATH
-  remote: .
+  remote: ..
   specs:
     maintenance_job (1.0.1)
       rails (>= 6.1)
@@ -133,12 +133,12 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
-  x86_64-linux
 
 DEPENDENCIES
   appraisal
   byebug
   maintenance_job!
+  rails (~> 7.0.0)
   sqlite3
 
 BUNDLED WITH

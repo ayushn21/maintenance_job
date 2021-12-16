@@ -13,12 +13,18 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        ruby_version: [2.6.6, 2.7.3, 3.0.2]
+        ruby: ['2.7', '3.0']
+        gemfile:
+          - rails_6_1
+          - rails_7
     continue-on-error: ${{ endsWith(matrix.ruby, 'head') || matrix.ruby == 'debug' }}
     # Has to be top level to cache properly
     env:
       BUNDLE_JOBS: 3
       BUNDLE_PATH: "vendor/bundle"
+      BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
+      BUNDLE_PATH_RELATIVE_TO_CWD: true
+
     steps:
       - uses: actions/checkout@master
       - name: Setup Ruby
