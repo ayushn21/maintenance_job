@@ -6,7 +6,6 @@ gem "rails", "~> 6.1.0"
 
 group :development do
   gem "sqlite3"
-  gem "byebug"
 end
 
 gemspec path: "../"
